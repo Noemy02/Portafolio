@@ -12,7 +12,7 @@ html{
 }
 /*menu*/
 .contenedor-header{
-    background: #1e2326;
+    background: #e5e7eb;
     position: fixed;
     width: 100%;
     top: 0%;
@@ -27,11 +27,9 @@ html{
     align-items: center;
     padding: 15px 20px;
 }
-.contenedor-header header .logo a{
-    font-family: 'Righteous';
-    font-size: 36px;
-    color: #1cb698;
-    text-decoration: none;
+.logo img {
+    height: 40px; /* Ajusta el tamaño del logo */
+    width: auto;
 }
 .contenedor-header header ul{
     display: flex;
@@ -39,7 +37,7 @@ html{
 }
 .contenedor-header header nav ul li a{
     text-align: none;
-    color: #fff;
+    color: #000000;
     margin: 0 15px;
     padding: 3px;
     transition: .5s;
@@ -50,7 +48,7 @@ html{
 }
 .nav-responsive{
     background-color: #1cb698;
-    color: #fff;
+    color: #252323;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -69,7 +67,7 @@ html{
 .inicio .contenido-banner{
     padding: 20px;
     background-color: #1e2326;
-    max-width: 350px;
+    max-width: 300px;
     margin: auto;
     text-align: center;
     border-radius: 40px;
@@ -78,7 +76,7 @@ html{
     margin-top: 40px;
     border: 10px solid #1CB698;
     display: block;
-    width: 80%;
+    width: 70%;
     margin: auto;
     border-radius: 100%;
 }
@@ -108,8 +106,8 @@ html{
     background-color: #1CB698;
 }
 .sobremi{
-    background-color: #1e2326;
-    color: #fff;
+    background-color: #1CB698;
+    color: #ffffff;
     padding: 50px 20px;
 }
 .sobremi .contenido-seccion{
@@ -129,7 +127,7 @@ html{
     margin-bottom: 20px;
 }
 .sobremi .contenido-seccion p span{
-    color: #1CB698;
+    color: #ffffff;
     font-weight: bold;
 }
 .sobremi .fila{
@@ -152,47 +150,26 @@ html{
 }
 .sobremi .fila .col ul li strong{
     display: inline-block;
-    color: #1CB698;
+    color: #ffffff;
     width: 130px;
 }
 .sobremi .fila .col ul li span{
-    background-color: #1CB698;
+    background-color: #ffffff;
     padding: 3px;
     font-weight: bold;
     border-radius: 5px;
 }
-.sobremi .fila .col .contenedor-intereses{
-    display: flex;
-    flex-wrap: wrap;
-}
-.sobremi .fila .col .contenedor-intereses .interes{
-    width: 100px;
-    height: 100px;
-    background-color: #252A2E;
-    border-radius: 10px;
-    margin: 0 15px 15px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: .3s;
-}.sobremi .fila .col .contenedor-intereses .interes:hover{
-    background-color: #1CB698;
-}
-.sobremi .fila .col .contenedor-intereses .interes i{
-    font-size: 30px;
-    margin-bottom: 10px;
-}
+
 .sobremi button{
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid #ffffff;
     width: fit-content;
     display: block;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color: #ffffff;
     position: relative;
     z-index: 10;
 }
@@ -202,7 +179,7 @@ html{
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #1CB698;
+    background-color: #4a98f1;
     z-index: -1;
     transition: 1s;
 }
@@ -210,7 +187,7 @@ html{
     width: 100%;
 }
 footer{
-    background-color: #252A2E;
+    background-color: #e5e7eb;
     color: #fff;
     padding: 50px 0 30px 0;
     text-align: center;
@@ -221,10 +198,10 @@ footer .redes{
     margin-bottom: 20px;
 }
 footer .redes a{
-    color: #fff;
+    color: #1CB698;
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid #000000;
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -237,7 +214,7 @@ footer .arriba{
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #1CB698;
+    background-color: #4a98f1;
     color: #fff;
     position: absolute;
     left: 50%;
@@ -247,6 +224,14 @@ footer .arriba{
     line-height: 50px;
     font-size: 18px;
 }
+footer p {
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
 /* SECCION RESPONSIVE */
 @media screen and (max-width:980px){
     nav{
