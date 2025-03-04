@@ -58,7 +58,8 @@ html{
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
     url(img/fondo.jpg);
-    background-size: cover;
+    background-size: auto;
+    background-position: left;
     height: 100vh;
     color: #fff;
     display: flex;
@@ -159,13 +160,11 @@ html{
     font-weight: bold;
     border-radius: 5px;
 }
-
 .sobremi button{
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #ffffff;
     width: fit-content;
-    display: block;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
