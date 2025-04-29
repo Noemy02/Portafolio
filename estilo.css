@@ -30,7 +30,25 @@ html{
 .logo img {
     height: 40px; /* Ajusta el tamaño del logo */
     width: auto;
+    
 }
+.logo-frase {
+    text-align: center;           /* Centra el texto debajo del logo */
+    font-size: 10px;              /* Tamaño del texto */
+    font-weight: bold;            /* Hace que el texto sea más destacado */
+    color: #1cb698;                  /* Color del texto (puedes cambiarlo) */
+    margin-top: 10px;             /* Espacio entre el logo y la frase */
+    letter-spacing: 1px;          /* Espacio entre las letras */
+    font-family: 'Great Vibes', cursive; /* Fuente personalizada */
+    text-transform: uppercase;    /* Hace el texto todo en mayúsculas */
+    line-height: 1.5;             /* Ajusta la altura de la línea */
+}
+
+.logo-frase:hover {
+    color: #ff0000;               /* Cambia el color cuando el mouse pasa sobre la frase */
+    transition: color 0.3s ease;  /* Efecto suave de transición */
+}
+
 .contenedor-header header ul{
     display: flex;
     list-style: none;
@@ -54,6 +72,63 @@ html{
     cursor: pointer;
     display: none;
 }
+.language-selector {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  #language-button {
+    padding: 10px;
+    font-size: 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #language-options {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 60px; /* ajusta según necesidad */
+    right: 0;
+    z-index: 100;
+    
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  #language-options.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  #language-options button {
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  #language-options button:hover {
+    background-color: #f0f0f0;
+  }
+  
 /*SECCION I N I C I O */
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
@@ -107,8 +182,8 @@ html{
     background-color: #1CB698;
 }
 .sobremi{
-    background-color: #1CB698;
-    color: #ffffff;
+    background-color: #b8d5ff;
+    color: #000000;
     padding: 50px 20px;
 }
 .sobremi .contenido-seccion{
@@ -128,7 +203,7 @@ html{
     margin-bottom: 20px;
 }
 .sobremi .contenido-seccion p span{
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
 }
 .sobremi .fila{
@@ -167,8 +242,8 @@ html{
     width: fit-content;
     margin: 20px auto;
     padding: 10px 22px;
-    font-size: 16px;
-    color: #ffffff;
+    font-size: 19px;
+    color: #000000;
     position: relative;
     z-index: 10;
 }
@@ -178,13 +253,151 @@ html{
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #4a98f1;
+    background-color: #6bf14a;
     z-index: -1;
     transition: 1s;
 }
 .sobremi button:hover .overlay{
     width: 100%;
 }
+.separador {
+    height: 40px;
+    background-color: #e5e7eb; 
+}
+
+.contenido-seccion .proyecto {
+    background-color: #b8d5ff;
+    max-width: 1100px; /* Limita el ancho */
+    margin: 0 auto; /* Centrado */
+    padding: 0 20px; /* Un poco de espacio a los lados */
+  }
+  
+  .galeria-proyectos {
+    width: 100%; /* <<< Añadido: ocupa todo el ancho */
+    display: flex;
+    gap: 20px; /* Separación entre proyectos */
+    justify-content: center; /* Centrar proyectos */
+    flex-wrap: wrap; /* Permite que bajen si no caben */
+    background-color: #b8d5ff; /* Fondo azul claro */
+    padding: 20px 0; /* Espacio arriba y abajo */
+    border-radius: 0; /* Fondo completo, sin bordes redondeados */
+}
+
+.proyecto {
+    background-color: #f8f8f8; /* Fondo de cada proyecto */
+    color: #000000;
+    padding: 20px; /* Relleno interno del proyecto */
+    border-radius: 10px;
+    overflow: hidden;
+    width: 400px; /* Ancho fijo para cada proyecto */
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.proyecto:hover {
+    background-color: #b8d5ff;
+    transform: translateY(-5px);
+}
+
+.proyecto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-proyecto {
+    padding: 15px;
+    text-align: center;
+}
+
+.proyectos h2 {
+    background-color: #b8d5ff;
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 0px 0;
+}
+  
+/* Estilos del Modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px; /* lo bajé un poco para que se vea mejor */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); /* más oscuro para que la imagen resalte */
+}
+
+.modal-content {
+    margin: auto;
+    display: flex;
+    flex-direction: column; /* ahora las imágenes van una debajo de otra (solo 1 visible) */
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: center;
+}
+
+/* Las imágenes dentro del modal */
+.modal-content img {
+    width: 90%;        /* Ocupa el 90% del ancho del contenedor */
+    max-width: 900px;  /* Límite máximo para no deformarse en pantallas grandes */
+    height: auto;      /* Mantener la proporción original */
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* sombra elegante */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.modal-content img:hover {
+    transform: scale(1.02); /* un pequeño zoom elegante */
+}
+
+/* Flechas de navegación en el modal */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.3s ease;
+    user-select: none;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover, .next:hover {
+    color: #f1f1f1;
+}
+
+/* Botón de cerrar */
+.close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+  
 footer{
     background-color: #e5e7eb;
     color: #fff;
