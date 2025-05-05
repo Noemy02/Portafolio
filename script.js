@@ -32,6 +32,9 @@ const translations = {
     "Couples Game": "Couples Game",
     "Proyecto de formulario de juego de parejas en Visual Basic 2019 con lenguaje C#": "Matching game form project in Visual Basic 2019 using C# language",
     "Herramientas utilizadas: label, tablelayoutpanel y timer.": "Tools used: label, tablelayoutpanel, and timer.",
+    "Boutique Escandalo": "Scandal Boutique",
+    "Sistema web para la gestión de una boutique, desarrollado como proyecto académico. Permite administrar productos, realizar búsquedas y gestionar usuarios mediante una interfaz web sencilla.":"Web-based system for managing a boutique, developed as an academic project. It allows you to manage products, search, and manage users through a simple web interface.",
+    "Herramientas utilizadas: HTML, CSS, Python (Flask o Django).":"Tools used: HTML, CSS, Python (Flask or Django).",
     "Todos los derechos reservados.": "All rights reserved.",
     "© 2025 Lorena Noemy Bermúdez Rodríguez. Todos los derechos reservados.": "© 2025 Lorena Noemy Bermúdez Rodríguez. All rights reserved."
 };
@@ -56,6 +59,17 @@ function translatePage(lang) {
             }
         });
     });
+const cvLink = document.getElementById('cv-link');
+const cvText = document.getElementById('cv-text');
+
+if (lang === 'en') {
+    cvLink.href = 'CV-Lorena-Bermudez-Rodriguez-EN.pdf';
+    cvText.textContent = 'Download CV';
+} else {
+    cvLink.href = 'CV-Lorena-Bermudez-Rodriguez-ES.pdf';
+    cvText.textContent = 'Descargar CV';
+}
+
 }
 
 // Botón selector de idioma
@@ -100,13 +114,19 @@ const proyectosImagenes = {
   'Couples Game': [
     'img/couples1.png',
     'img/couples2.png',
+  ],
+  'Boutique Escandalo': [
+    'img/boutique1.jpeg',
+    'img/boutique2.jpeg',
+    'img/boutique3.jpeg',
+    'img/boutique4.jpeg',
   ]
 };
 
 // Asignamos evento click a cada imagen de proyecto
 document.querySelectorAll('.proyecto img').forEach(img => {
   img.addEventListener('click', (e) => {
-    const tituloProyecto = e.target.nextElementSibling.querySelector('h3').innerText;
+    const tituloProyecto = e.target.getAttribute('data-title'); // cambio aquí
 
     // Limpiamos el contenido anterior del modal
     modalContent.innerHTML = '';

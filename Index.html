@@ -8,42 +8,42 @@
     <title>Portafolio</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<!-- Botón flotante de idioma -->
+<body>
+  <!-- Botón flotante de idioma -->
 <div class="language-selector">
-    <button id="language-button">🌐</button>
-    <div id="language-options" class="hidden">
-        <button id="english">English</button>
-        <button id="spanish">Español</button>
-    </div>
+  <button id="language-button">🌐</button>
+  <div id="language-options" class="hidden">
+      <button id="english">English</button>
+      <button id="spanish">Español</button>
+  </div>
 </div>
 <!-- Modal de Imágenes -->
 <div id="modal" class="modal">
-    <span class="close">&times;</span>
-    <a class="prev">&#10094;</a> <!-- Flecha izquierda -->
-    <a class="next">&#10095;</a> <!-- Flecha derecha -->
-    <div class="modal-content" id="modal-content">
-    </div>
-  </div>  
-  
-  <script>
-    const languageButton = document.getElementById('language-button');
-    const languageOptions = document.getElementById('language-options');
-    const languageSelector = document.querySelector('.language-selector');
-  
-    languageButton.addEventListener('click', (e) => {
-      e.stopPropagation(); // Para que el clic en el botón no cierre el menú
-      languageOptions.classList.toggle('show');
-    });
-  
-    // Cerrar si se hace clic fuera del menú
-    document.addEventListener('click', (e) => {
-      if (!languageSelector.contains(e.target)) {
-        languageOptions.classList.remove('show');
-      }
-    });
-  </script>
-  
-<body>
+  <span class="close">&times;</span>
+  <a class="prev">&#10094;</a> <!-- Flecha izquierda -->
+  <a class="next">&#10095;</a> <!-- Flecha derecha -->
+  <div class="modal-content" id="modal-content">
+  </div>
+</div>  
+
+<script>
+  const languageButton = document.getElementById('language-button');
+  const languageOptions = document.getElementById('language-options');
+  const languageSelector = document.querySelector('.language-selector');
+
+  languageButton.addEventListener('click', (e) => {
+    e.stopPropagation(); // Para que el clic en el botón no cierre el menú
+    languageOptions.classList.toggle('show');
+  });
+
+  // Cerrar si se hace clic fuera del menú
+  document.addEventListener('click', (e) => {
+    if (!languageSelector.contains(e.target)) {
+      languageOptions.classList.remove('show');
+    }
+  });
+</script>
+
    <!--MENU ENCABEZADO-->
    <div class="contenedor-header">
         <header>
@@ -70,12 +70,12 @@
    <section id="inicio" class="inicio">
     <div class="contenido-banner">
         <div class="contenedor-img">
-            <img src="img/" alt="">
+            <img src="img/perfil1.jpg" alt="">
         </div>
         <h1>LORENA BERMUDEZ</h1>
         <h2>Estudiante de Ingeniería en Sistemas y Redes Informáticas</h2>
         <div class="redes">
-            <a href="https://www.linkedin.com/in/lorena-noemy-bermudez-rodriguez-4b779b353" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/lorena-bermúdez-4b779b353" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
         </div>        
@@ -87,54 +87,65 @@
         <div class="contenido-seccion">
             <h2>Sobre Mí</h2>
             <p><span>Soy Lorena Noemy Bermúdez Rodríguez, estudiante de Ingeniería en Sistemas y Redes Informáticas. Actualmente me encuentro en proceso de formación, fortaleciendo mis habilidades en programación, administración de redes y desarrollo web. Me distingo por ser una persona responsable, proactiva y con un gran compromiso por continuar creciendo y aportando en el ámbito tecnológico.</span></p>
-
-                <a href="cv-lorena.pdf" download>
-                    <button>
-                        Descargar CV <i class="cv-lorena"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </a>
+            <a id="cv-link" href="CV-Lorena-Bermudez-Rodriguez-ES.pdf" download>
+              <button>
+                  <span id="cv-text">Descargar CV</span> <i class="fa-solid fa-download"></i>
+                  <span class="overlay"></span>
+              </button>
+            </a>          
             </div>
         </div>
     </section>
     <div class="separador"></div>
-    <!-- SECCION PROYECTOS-->
-    <section class="proyectos" id="proyectos">
-        <div class="contenido-seccion">
-            <h2>Proyectos</h2>
-            <div class="galeria-proyectos">
-            <!-- Proyecto 1 -->
-            <div class="proyecto">
-              <img src="img/huellitas1.png" alt="Huellitas Urbanas">
-              <div class="info-proyecto">
-                <h3>Huellitas Urbanas</h3>
-                <p>Es una aplicación web orientada a la gestión de un refugio de mascotas.</p>
-                <p>Herramientas utilizadas: HTML5, CSS3, JavaScript, PHP.</p>
-                <p>Repositorio: <a href="https://github.com/Noemy02/Huellitasurbanas.git" target="_blank">GitHub</a></p>
-              </div>
-            </div>
-            <!-- Proyecto 2 -->
-            <div class="proyecto">
-              <img src="img/couples1.png" alt="Couples Game">
-              <div class="info-proyecto">
-                <h3>Couples Game</h3>
-                <p>Proyecto de formulario de juego de parejas en Visual Basic 2019 con lenguaje C#</p>
-                <p>Herramientas utilizadas: label, tablelayoutpanel y timer.</p>
-                <p>Repositorio: <a href="https://github.com/Noemy02/Couples_game.git" target="_blank">GitHub</a></p>
-              </div>
-            </div>
+   <!-- SECCION PROYECTOS-->
+<section class="proyectos" id="proyectos">
+  <div class="contenido-seccion">
+    <h2>Proyectos</h2>
+    <div class="galeria-proyectos">
       
-          </div>
+      <!-- Proyecto 1 -->
+      <div class="proyecto">
+        <img src="img/huellitas1.png" alt="Huellitas Urbanas" data-title="Huellitas Urbanas">
+        <div class="info-proyecto">
+          <h3>Huellitas Urbanas</h3>
+          <p>Es una aplicación web orientada a la gestión de un refugio de mascotas.</p>
+          <p>Herramientas utilizadas: HTML5, CSS3, JavaScript, PHP.</p>
+          <p>Repositorio: <a href="https://github.com/Noemy02/Huellitasurbanas.git" target="_blank">GitHub</a></p>
         </div>
-      </section>
-          
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="proyecto">
+        <img src="img/couples1.png" alt="Couples Game" data-title="Couples Game">
+        <div class="info-proyecto">
+          <h3>Couples Game</h3>
+          <p>Proyecto de formulario de juego de parejas en Visual Basic 2019 con lenguaje C#</p>
+          <p>Herramientas utilizadas: label, tablelayoutpanel y timer.</p>
+          <p>Repositorio: <a href="https://github.com/Noemy02/Couples_game.git" target="_blank">GitHub</a></p>
+        </div>
+      </div>
+
+      <!-- Proyecto 3 -->
+      <div class="proyecto">
+        <img src="img/boutique1.jpeg" alt="Boutique Escandalo" data-title="Boutique Escandalo">
+        <div class="info-proyecto">
+          <h3>Boutique Escandalo</h3>
+          <p>Sistema web para la gestión de una boutique, desarrollado como proyecto académico. Permite administrar productos, realizar búsquedas y gestionar usuarios mediante una interfaz web sencilla.</p>
+          <p>Herramientas utilizadas: HTML, CSS, Python (Flask o Django).</p>
+          <p>Repositorio: <a href="https://github.com/Noemy02/Boutique-Escandalo.git" target="_blank">GitHub</a></p>
+        </div>
+      </div>
+
+    </div> <!-- Fin de galeria-proyectos -->
+  </div>
+</section>
         <!-- footer -->
         <footer>
             <a href="#inicio" class="arriba">
                 <i class="fa-solid fa-angles-up"></i>
             </a>
             <div class="redes">
-                <a href="https://www.linkedin.com/in/lorena-noemy-bermudez-rodriguez-4b779b353" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/lorena-bermúdez-4b779b353" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
             </div>            
