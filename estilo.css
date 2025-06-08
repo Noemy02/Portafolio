@@ -314,14 +314,14 @@ section {
 
 .info-proyecto {
     padding: 15px;
-    text-align: center;
+    text-align: justify;
 }
 
 .proyectos h2 {
     background-color: #b8d5ff;
     font-size: 48px;
     font-family: 'Righteous';
-    text-align: center;
+    text-align: justify;
     padding: 0px 0;
 }
 section {
@@ -407,6 +407,48 @@ section {
 }
 
   
+/* SECCION CONTACTO */
+.contacto {
+  background-color: #f9f9f9;
+}
+
+.contenido-contacto {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+input, textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
 footer{
     background-color: #e5e7eb;
     color: #fff;

@@ -58,6 +58,7 @@
                    <li><a href="#inicio">INICIO</a></li>
                    <li><a href="#sobremi">SOBRE MI</a></li>
                    <li><a href="#proyectos">PROYECTOS</a></li>
+                   <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
             <div class="nav-responsive">
@@ -107,10 +108,12 @@
       <div class="proyecto">
         <img src="img/huellitas1.png" alt="Huellitas Urbanas" data-title="Huellitas Urbanas">
         <div class="info-proyecto">
-          <h3>Huellitas Urbanas</h3>
-          <p>Es una aplicación web orientada a la gestión de un refugio de mascotas.</p>
-          <p>Herramientas utilizadas: HTML5, CSS3, JavaScript, PHP.</p>
-          <p>Repositorio: <a href="https://github.com/Noemy02/Huellitasurbanas.git" target="_blank">GitHub</a></p>
+          <h3><strong>Huellitas Urbanas</strong></h3>
+          <p><strong>Objetivo del proyecto:</strong> Desarrollar una aplicación web para facilitar la gestión integral de un refugio de mascotas, permitiendo el registro, seguimiento y adopción de animales, así como la administración de recursos y personal del refugio.</p>
+          <p><strong>Descripción general del proceso de trabajo:</strong> El proyecto se llevó a cabo en distintas etapas: análisis de requerimientos, diseño de la interfaz de usuario, desarrollo de funcionalidades principales como registro de mascotas, perfiles de adopción, y panel administrativo.</p>
+          <p><strong>Rol y responsabilidades en el proyecto:</strong> Me desempeñé como administradora de base de datos, siendo responsable del diseño lógico y físico de la base de datos.</p>
+          <p><strong>Tecnologias Utilizadas:</strong> HTML5, CSS3, JavaScript, PHP.</p>
+          <p><strong>Repositorio:</strong> <a href="https://github.com/Noemy02/Huellitasurbanas.git" target="_blank">GitHub</a></p>
         </div>
       </div>
 
@@ -118,10 +121,12 @@
       <div class="proyecto">
         <img src="img/couples1.png" alt="Couples Game" data-title="Couples Game">
         <div class="info-proyecto">
-          <h3>Couples Game</h3>
-          <p>Proyecto de formulario de juego de parejas en Visual Basic 2019 con lenguaje C#</p>
-          <p>Herramientas utilizadas: label, tablelayoutpanel y timer.</p>
-          <p>Repositorio: <a href="https://github.com/Noemy02/Couples_game.git" target="_blank">GitHub</a></p>
+          <h3><strong>Couples Game</strong></h3>
+          <p><strong>Objetivo del proyecto:</strong>  Desarrollar un juego interactivo de emparejamiento de cartas como aplicación de escritorio, con el objetivo de ofrecer una experiencia lúdica y dinámica, utilizando tecnologías de desarrollo visual y programación orientada a objetos.</p>
+          <p><strong>Descripción general del proceso de trabajo:</strong> Se implementó la lógica del juego en C#, aprovechando el entorno Visual Basic 2019 para el diseño de la interfaz gráfica. Se utilizaron componentes como Label, TableLayoutPanel y Timer para representar las cartas, organizar la disposición de elementos y controlar el tiempo de juego.</p>
+          <p><strong>Rol y responsabilidades en el proyecto:</strong> Me desempeñé como desarrolladora full-stack, liderando tanto el diseño de la interfaz de usuario como la implementación de la lógica del juego.</p>
+          <p><strong>Tecnologias Utilizadas:</strong> C# (utilizando Visual Basic 2019 como entorno de desarrollo).</p>
+          <p><strong>Repositorio:</strong> <a href="https://github.com/Noemy02/Couples_game.git" target="_blank">GitHub</a></p>
         </div>
       </div>
 
@@ -129,16 +134,39 @@
       <div class="proyecto">
         <img src="img/boutique1.jpeg" alt="Boutique Escandalo" data-title="Boutique Escandalo">
         <div class="info-proyecto">
-          <h3>Boutique Escandalo</h3>
-          <p>Sistema web para la gestión de una boutique, desarrollado como proyecto académico. Permite administrar productos, realizar búsquedas y gestionar usuarios mediante una interfaz web sencilla.</p>
-          <p>Herramientas utilizadas: HTML, CSS, Python (Flask o Django).</p>
-          <p>Repositorio: <a href="https://github.com/Noemy02/Boutique-Escandalo.git" target="_blank">GitHub</a></p>
+          <h3><strong>Boutique Escandalo</strong></h3>
+          <p><strong>Objetivo del proyecto:</strong> Desarrollar un sistema web para la gestión de productos, usuarios y procesos básicos de una boutique, como parte de un proyecto académico enfocado en la creación de aplicaciones funcionales para pequeñas empresas.</p>
+          <p><strong>Descripción general del proceso de trabajo:</strong> El desarrollo del sistema se estructuró en fases: análisis de requerimientos, diseño de la base de datos, creación de la interfaz de usuario y desarrollo del backend utilizando un framework de Python (Flask o Django).</p>
+          <p><strong>Rol y responsabilidades en el proyecto:</strong> Me desempeñé como diseñadora de interfaz de usuario, siendo responsable del diseño visual de la plataforma. Definí la estructura de navegación, los esquemas de color, tipografía y disposición de los elementos para lograr una experiencia estética y funcional, enfocada en la usabilidad y accesibilidad para el usuario final.</p>
+          <p><strong>Tecnologias Utilizadas:</strong> HTML, CSS y Python (Flask o Django).</p>
+          <p><strong>Repositorio:</strong> <a href="https://github.com/Noemy02/Boutique-Escandalo.git" target="_blank">GitHub</a></p>
         </div>
       </div>
 
     </div> <!-- Fin de galeria-proyectos -->
   </div>
+
+<!-- SECCION CONTACTO -->
+<section id="contacto" class="contacto">
+    <div class="contenido-contacto">
+        <h2>CONTACTO</h2>
+        <div class="fila">
+            <div class="col">
+                <form action="https://formspree.io/f/mgvyogrn" method="POST">
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="email" name="correo" placeholder="Email" required>
+                    <input type="text" name="tema" placeholder="Asunto" required>
+                    <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                    <button type="submit">
+                        Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
+
         <!-- footer -->
         <footer>
             <a href="#inicio" class="arriba">
