@@ -25,7 +25,7 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px;
 }
 .logo img {
     height: 40px; /* Ajusta el tamaño del logo */
@@ -141,7 +141,7 @@ html{
     align-items: center;
 }
 .inicio .contenido-banner{
-    padding: 20px;
+    padding: 10px;
     background-color: #1e2326;
     max-width: 300px;
     margin: auto;
@@ -237,6 +237,12 @@ html{
     font-weight: bold;
     border-radius: 5px;
 }
+#cv-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none; /* Quita el subrayado */
+}
+
 .sobremi button{
     cursor: pointer;
     background-color: transparent;
@@ -478,6 +484,57 @@ button:hover {
   background: linear-gradient(to right, #3a78c2, #005edc);
   transform: scale(1.03);
 }
+
+
+/* SECCION Habilidades */
+.habilidad {
+  margin-bottom: 20px;
+}
+
+.habilidad .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.habilidad .info i {
+  margin-right: 10px;
+  font-size: 1.6em;
+}
+
+/* Colores de íconos */
+.icono-figma {
+  color: #f21ea1;
+}
+
+.icono-html {
+  color: #FF0000;
+}
+
+.icono-js {
+  color: #FFFF00;
+}
+
+.icono-css {
+  color: #0000FF;
+}
+
+/* Barra de progreso */
+.barra {
+  background-color: #ffffff;
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.barra .progreso {
+  height: 8px;
+  background-color: #ff0000;
+  border-radius: 10px;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
