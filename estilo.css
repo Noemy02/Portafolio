@@ -33,17 +33,16 @@ html{
     
 }
 .logo-frase {
-    text-align: center;           /* Centra el texto debajo del logo */
-    font-size: 10px;              /* Tamaño del texto */
-    font-weight: bold;            /* Hace que el texto sea más destacado */
-    color: #1cb698;                  /* Color del texto (puedes cambiarlo) */
-    margin-top: 10px;             /* Espacio entre el logo y la frase */
-    letter-spacing: 1px;          /* Espacio entre las letras */
-    font-family: 'Great Vibes', cursive; /* Fuente personalizada */
-    text-transform: uppercase;    /* Hace el texto todo en mayúsculas */
-    line-height: 1.5;             /* Ajusta la altura de la línea */
+    text-align: center;
+    font-size: clamp(0.8rem, 2.5vw, 1.5rem); /* Tamaño adaptable */
+    font-weight: bold;
+    color: #1cb698;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-family: 'Great Vibes', cursive;
+    line-height: 1.5;
+    /* Evitamos mayúsculas forzadas para esta fuente manuscrita */
 }
-
 .logo-frase:hover {
     color: #ff0000;               /* Cambia el color cuando el mouse pasa sobre la frase */
     transition: color 0.3s ease;  /* Efecto suave de transición */
@@ -156,7 +155,7 @@ html{
     border: 10px solid #1CB698;
     border-radius: 50%;
     display: block;
-    margin: 60px auto 0 auto;
+    margin: 100px auto 0 auto;
 }
 
 .inicio .contenido-banner h1{
@@ -322,7 +321,7 @@ section {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
-    padding: 0px 0;
+    padding: 25px 0;
 }
 section {
     scroll-margin-top: 90px;
