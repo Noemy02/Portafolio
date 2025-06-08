@@ -76,10 +76,13 @@
         <h1>LORENA BERMUDEZ</h1>
         <h2>Estudiante de Ingeniería en Sistemas y Redes Informáticas</h2>
         <div class="redes">
-          <a href="https://www.linkedin.com/in/lorena-bermúdez-4b779b353" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-        </div>        
+        <a href="https://www.linkedin.com/in/lorena-bermúdez-4b779b353" target="_blank" class="icono">
+        <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/Noemy02" target="_blank" class="icono">
+        <i class="fa-brands fa-github"></i>
+        </a>
+    </div>
     </div>
    </section>
 
@@ -145,38 +148,88 @@
 
     </div> <!-- Fin de galeria-proyectos -->
   </div>
-
+    <div class="separador"></div>
 <!-- SECCION CONTACTO -->
-<section id="contacto" class="contacto">
-    <div class="contenido-contacto">
-        <h2>CONTACTO</h2>
-        <div class="fila">
-            <div class="col">
-                <form action="https://formspree.io/f/mgvyogrn" method="POST">
-                    <input type="text" name="nombre" placeholder="Nombre" required>
-                    <input type="email" name="correo" placeholder="Email" required>
-                    <input type="text" name="tema" placeholder="Asunto" required>
-                    <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
-                    <button type="submit">
-                        Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
+<section class="contacto" id="contacto">
+  <div class="contenido-contacto">
+    <h2>Contacto</h2>
+    <form id="formulario-contacto" action="https://formspree.io/f/mgvyogrn" method="POST">
+      <div class="input-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+
+      <div class="input-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="input-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      </div>
+
+      <!-- Anti-bot -->
+      <input type="text" name="_gotcha" style="display:none" />
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <p id="mensaje-exito" style="display:none; color: green; text-align:center; margin-top:1rem;">
+      ¡Mensaje enviado con éxito!
+    </p>
+    <p id="mensaje-error" style="display:none; color: red; text-align:center; margin-top:1rem;">
+      Hubo un error al enviar. Por favor intenta nuevamente.
+    </p>
+  </div>
 </section>
+
+<script>
+  const form = document.getElementById("formulario-contacto");
+  const mensajeExito = document.getElementById("mensaje-exito");
+  const mensajeError = document.getElementById("mensaje-error");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    mensajeExito.style.display = "none";
+    mensajeError.style.display = "none";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        mensajeExito.style.display = "block";
+        form.reset();
+      } else {
+        mensajeError.style.display = "block";
+      }
+    } catch (error) {
+      mensajeError.style.display = "block";
+    }
+  });
+</script>
+
 
         <!-- footer -->
         <footer>
             <a href="#inicio" class="arriba">
                 <i class="fa-solid fa-angles-up"></i>
             </a>
-            <div class="redes">
-              <a href="https://www.linkedin.com/in/lorena-bermúdez-4b779b353" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-            </div>            
+        <div class="redes">
+        <a href="https://www.linkedin.com/in/lorena-bermúdez-4b779b353" target="_blank" class="icono">
+        <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/Noemy02" target="_blank" class="icono">
+        <i class="fa-brands fa-github"></i>
+        </a>
+    </div>            
             <p>&copy; 2025 Lorena Noemy Bermúdez Rodríguez. Todos los derechos reservados.</p> 
         </footer>
     

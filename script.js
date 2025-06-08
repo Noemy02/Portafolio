@@ -19,6 +19,7 @@ const translations = {
     "INICIO": "HOME",
     "SOBRE MI": "ABOUT ME",
     "PROYECTOS": "PROJECTS",
+    "CONTACTO": "CONTACT",
     "Sobre Mí": "About Me",
     "Estudiante de Ingeniería en Sistemas y Redes Informáticas": "Systems and Computer Networks Engineering Student",
     "Soy Lorena Noemy Bermúdez Rodríguez, estudiante de Ingeniería en Sistemas y Redes Informáticas. Actualmente me encuentro en proceso de formación, fortaleciendo mis habilidades en programación, administración de redes y desarrollo web. Me distingo por ser una persona responsable, proactiva y con un gran compromiso por continuar creciendo y aportando en el ámbito tecnológico.":
@@ -26,16 +27,30 @@ const translations = {
     "Descargar CV": "Download CV",
     "Proyectos": "Projects",
     "Huellitas Urbanas": "Urban Pawprints",
-    "Objetivo del proyecto: Desarrollar una aplicación web para facilitar la gestión integral de un refugio de mascotas, permitiendo el registro, seguimiento y adopción de animales, así como la administración de recursos y personal del refugio.": "Project Objective: To develop a web application to facilitate the comprehensive management of a pet shelter, enabling the registration, tracking, and adoption of animals, as well as the management of shelter resources and staff.",
-    "Descripción general del proceso de trabajo: El proyecto se llevó a cabo en distintas etapas: análisis de requerimientos, diseño de la interfaz de usuario, desarrollo de funcionalidades principales como registro de mascotas, perfiles de adopción, y panel administrativo.": "Workflow Overview: The project was carried out in several stages: requirements analysis, user interface design, development of core features such as pet registration, adoption profiles, and an administrative dashboard.",
-    "Rol y responsabilidades en el proyecto: Me desempeñé como administradora de base de datos, siendo responsable del diseño lógico y físico de la base de datos.": "Role and responsibilities in the project: I served as a database administrator, being responsible for the logical and physical design of the database.",
+    "Objetivo del proyecto": "Project Objective:",
+     "Desarrollar una aplicación web para facilitar la gestión integral de un refugio de mascotas, permitiendo el registro, seguimiento y adopción de animales, así como la administración de recursos y personal del refugio.": "To develop a web application to facilitate the comprehensive management of a pet shelter, enabling the registration, tracking, and adoption of animals, as well as the management of shelter resources and staff.",
+     "Descripción general del proceso de trabajo: El proyecto se llevó a cabo en distintas etapas: análisis de requerimientos, diseño de la interfaz de usuario, desarrollo de funcionalidades principales como registro de mascotas, perfiles de adopción, y panel administrativo.":
+    "Workflow Overview: The project was carried out in several stages: requirements analysis, user interface design, development of core features such as pet registration, adoption profiles, and an administrative dashboard.",
+    "Rol y responsabilidades en el proyecto: Me desempeñé como administradora de base de datos, siendo responsable del diseño lógico y físico de la base de datos.":
+    "Role and responsibilities in the project: I served as a database administrator, being responsible for the logical and physical design of the database.",
+    "Tecnologias Utilizadas:": "Technologies Used:",
     "Repositorio:": "Repository:",
     "Couples Game": "Couples Game",
-    "Proyecto de formulario de juego de parejas en Visual Basic 2019 con lenguaje C#": "Matching game form project in Visual Basic 2019 using C# language",
-    "Herramientas utilizadas: label, tablelayoutpanel y timer.": "Tools used: label, tablelayoutpanel, and timer.",
-    "Boutique Escandalo": "Scandal Boutique",
-    "Sistema web para la gestión de una boutique, desarrollado como proyecto académico. Permite administrar productos, realizar búsquedas y gestionar usuarios mediante una interfaz web sencilla.":"Web-based system for managing a boutique, developed as an academic project. It allows you to manage products, search, and manage users through a simple web interface.",
-    "Herramientas utilizadas: HTML, CSS, Python (Flask o Django).":"Tools used: HTML, CSS, Python (Flask or Django).",
+  "Objetivo del proyecto:  Desarrollar un juego interactivo de emparejamiento de cartas como aplicación de escritorio, con el objetivo de ofrecer una experiencia lúdica y dinámica, utilizando tecnologías de desarrollo visual y programación orientada a objetos.":
+    "Project Objective: To develop an interactive card matching game as a desktop application, aiming to provide a playful and dynamic experience using visual development technologies and object-oriented programming.",
+  "Descripción general del proceso de trabajo: Se implementó la lógica del juego en C#, aprovechando el entorno Visual Basic 2019 para el diseño de la interfaz gráfica. Se utilizaron componentes como Label, TableLayoutPanel y Timer para representar las cartas, organizar la disposición de elementos y controlar el tiempo de juego.":
+    "Workflow Overview: The game logic was implemented in C#, using the Visual Basic 2019 environment for graphical interface design. Components such as Label, TableLayoutPanel, and Timer were used to represent cards, organize layout, and control game time.",
+  "Rol y responsabilidades en el proyecto: Me desempeñé como desarrolladora full-stack, liderando tanto el diseño de la interfaz de usuario como la implementación de la lógica del juego.":
+    "Role and responsibilities in the project: I worked as a full-stack developer, leading both the user interface design and the implementation of the game logic.",
+  "Tecnologias Utilizadas: C# (utilizando Visual Basic 2019 como entorno de desarrollo).":
+    "Technologies Used: C# (using Visual Basic 2019 as the development environment).",
+  "Boutique Escandalo": "Scandal Boutique",
+  "Objetivo del proyecto: Desarrollar un sistema web para la gestión de productos, usuarios y procesos básicos de una boutique, como parte de un proyecto académico enfocado en la creación de aplicaciones funcionales para pequeñas empresas.":
+    "Project Objective: Web-based system for managing a boutique, developed as an academic project. It allows you to manage products, search, and manage users through a simple web interface.",
+  "Descripción general del proceso de trabajo: El desarrollo del sistema se estructuró en fases: análisis de requerimientos, diseño de la base de datos, creación de la interfaz de usuario y desarrollo del backend utilizando un framework de Python (Flask o Django).":
+    "Workflow Overview: The system development was structured in phases: requirements analysis, database design, user interface creation, and backend development using a Python framework (Flask or Django).",
+  "Rol y responsabilidades en el proyecto: Me desempeñé como diseñadora de interfaz de usuario, siendo responsable del diseño visual de la plataforma. Definí la estructura de navegación, los esquemas de color, tipografía y disposición de los elementos para lograr una experiencia estética y funcional, enfocada en la usabilidad y accesibilidad para el usuario final.": "Role and responsibilities in the project I worked as a user interface designer, responsible for the visual design of the platform. I defined the navigation structure, color schemes, typography, and element layout to achieve an aesthetic and functional user experience focused on usability and accessibility.",
+    "Tecnologias Utilizadas HTML, CSS y Python (Flask o Django).": "Technologies Used HTML, CSS, Python (Flask or Django).",
     "Todos los derechos reservados.": "All rights reserved.",
     "© 2025 Lorena Noemy Bermúdez Rodríguez. Todos los derechos reservados.": "© 2025 Lorena Noemy Bermúdez Rodríguez. All rights reserved."
 };
