@@ -123,19 +123,19 @@ let slideInterval;
 // Definimos las imágenes de cada proyecto
 const proyectosImagenes = {
   'Huellitas Urbanas': [
-    'Img/huellitas1.png',
-    'Img/huellitas2.png',
-    'Img/huellitas3.png'
+    'img/huellitas1.png',
+    'img/huellitas2.png',
+    'img/huellitas3.png'
   ],
   'Couples Game': [
-    'Img/couples1.png',
-    'Img/couples2.png',
+    'img/couples1.png',
+    'img/couples2.png',
   ],
   'Boutique Escandalo': [
-    'Img/boutique1.jpeg',
-    'Img/boutique2.jpeg',
-    'Img/boutique3.jpeg',
-    'Img/boutique4.jpeg',
+    'img/boutique1.jpeg',
+    'img/boutique2.jpeg',
+    'img/boutique3.jpeg',
+    'img/boutique4.jpeg',
   ]
 };
 
@@ -151,7 +151,7 @@ document.querySelectorAll('.proyecto img').forEach(img => {
       const imagenes = proyectosImagenes[tituloProyecto];
       
       imagenes.forEach(src => {
-        const imagen = document.createElement('Img');
+        const imagen = document.createElement('img');
         imagen.src = src;
         imagen.style.display = 'none'; // ocultar todas inicialmente
         modalContent.appendChild(imagen);
