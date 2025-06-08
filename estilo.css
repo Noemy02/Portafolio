@@ -34,14 +34,14 @@ html{
 }
 .logo-frase {
     text-align: center;
-    font-size: clamp(0.8rem, 2.5vw, 1.5rem); /* Tamaño adaptable */
-    font-weight: bold;
+    font-size: clamp(1rem, 3vw, 1.6rem);
+    font-weight: 500;
     color: #1cb698;
     margin-top: 10px;
     letter-spacing: 1px;
     font-family: 'Great Vibes', cursive;
+    text-transform: none; /* importante para mantener legibilidad */
     line-height: 1.5;
-    /* Evitamos mayúsculas forzadas para esta fuente manuscrita */
 }
 .logo-frase:hover {
     color: #ff0000;               /* Cambia el color cuando el mouse pasa sobre la frase */
