@@ -10,6 +10,53 @@
 html{
     scroll-behavior: smooth;
 }
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 10;
+  }
+
+  nav.menu-visible {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-responsive {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+  }
+ nav ul li a.active {
+  color: #3EB489;
+  border-bottom: 2px solid #3EB489;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #3EB489,
+    0 0 10px #76C7B7;
+  transition: all 0.3s ease;
+}
+
+}
+
+
+/* En pantallas grandes ocultamos el icono hamburguesa */
+.nav-responsive {
+  display: none;
+}
+
 /*menu*/
 .contenedor-header{
     background: #e5e7eb;

@@ -261,3 +261,28 @@ window.onclick = function(event) {
     stopCarousel();
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.getElementById("nav");
+    const toggle = document.querySelector(".nav-responsive i");
+    const links = nav.querySelectorAll("a");
+
+    // Mostrar u ocultar menú en móvil
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("menu-visible");
+    });
+
+    // Resaltar el enlace activo al hacer clic
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        // Eliminar clase activa de todos
+        links.forEach(l => l.classList.remove("active"));
+        // Agregar clase al actual
+        link.classList.add("active");
+
+        // Ocultar menú (modo móvil)
+        nav.classList.remove("menu-visible");
+      });
+    });
+  });
+
