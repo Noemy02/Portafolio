@@ -10,51 +10,63 @@
 html{
     scroll-behavior: smooth;
 }
-/* Estilos para móviles */
+/* Icono hamburguesa visible solo en móviles */
+.nav-responsive {
+  display: none; /* Oculto por defecto */
+  cursor: pointer;
+  font-size: 24px;
+  color: white; /* o el color que prefieras */
+}
+
+/* Cuando la pantalla es menor o igual a 768px, mostrar el icono */
 @media (max-width: 768px) {
-  nav {
+  .nav-responsive {
+    display: block;
+  }
+
+  /* Ocultar menú por defecto */
+  nav#nav {
     display: none;
     position: absolute;
-    top: 90px;
+    top: 90px;  /* ajusta según tu header */
     right: 0;
-    background-color: #ffffff;
     width: 100%;
+    background-color: #fff;
     text-align: center;
     padding: 20px 0;
     z-index: 10;
   }
 
-  nav.menu-visible {
+  /* Mostrar menú si tiene la clase menu-visible */
+  nav#nav.menu-visible {
     display: block;
   }
 
-  nav ul {
+  nav#nav ul {
     flex-direction: column;
     gap: 15px;
   }
 
-  .nav-responsive {
-    display: block;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
+  nav#nav ul li a.active {
+    color: #3EB489;
+    border-bottom: 2px solid #3EB489;
+    font-weight: bold;
+    text-shadow:
+      0 0 5px #3EB489,
+      0 0 10px #76C7B7;
+    transition: all 0.3s ease;
   }
- nav ul li a.active {
-  color: #3EB489;
-  border-bottom: 2px solid #3EB489;
-  font-weight: bold;
-  text-shadow:
-    0 0 5px #3EB489,
-    0 0 10px #76C7B7;
-  transition: all 0.3s ease;
 }
 
-}
+/* Para pantallas grandes, mostrar menú horizontal normal */
+@media (min-width: 769px) {
+  nav#nav {
+    display: block;
+  }
 
-
-/* En pantallas grandes ocultamos el icono hamburguesa */
-.nav-responsive {
-  display: none;
+  .nav-responsive {
+    display: none;
+  }
 }
 
 /*menu*/
@@ -595,7 +607,6 @@ button:hover {
   margin-bottom: 30px;              
 }
 
-
 .filtros { 
   background-color: #b8d5ff;
   display: flex;
@@ -686,6 +697,30 @@ button:hover {
 
 .oculto {
   display: none !important;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 600px) {
+  .galeria-certificados {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .certificado-item {
+    width: 90%;       /* Más ancho para móvil */
+    max-width: 320px; /* Limita ancho máximo */
+  }
+
+  .modal-contenido {
+    width: 95%;
+    max-width: none;  /* Ocupa casi todo el ancho */
+  }
+
+  .cerrar {
+    right: 20px;      /* Ajusta posición para móvil */
+    font-size: 28px;  /* Tamaño más pequeño */
+  }
 }
 
 

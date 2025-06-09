@@ -132,38 +132,30 @@ window.onclick = function(event) {
     stopCarousel();
   }
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.getElementById("nav");
+  const toggle = document.querySelector(".nav-responsive");
 
-document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.getElementById("nav");
-    const toggle = document.querySelector(".nav-responsive i");
+  if (nav && toggle) {
     const links = nav.querySelectorAll("a");
 
-    // Mostrar u ocultar menú en móvil
     toggle.addEventListener("click", () => {
       nav.classList.toggle("menu-visible");
     });
 
-    // Resaltar el enlace activo al hacer clic
     links.forEach(link => {
       link.addEventListener("click", () => {
-        // Eliminar clase activa de todos
         links.forEach(l => l.classList.remove("active"));
-        // Agregar clase al actual
         link.classList.add("active");
-
-        // Ocultar menú (modo móvil)
         nav.classList.remove("menu-visible");
       });
     });
-  });
- // Agregar funcionalidad a los botones de idioma
-    document.getElementById("english").addEventListener("click", () => {
-    window.location.href = "index-en.html";
-  });
+  } else {
+    console.warn("No se encontró el elemento de navegación o el botón toggle.");
+  }
+});
 
-    document.getElementById("spanish").addEventListener("click", () => {
-    window.location.href = "index.html";
-  });
+
 
 function filtrarCertificados(tipo, event) {
   const botones = document.querySelectorAll('.btn-filtro');
