@@ -92,7 +92,7 @@ html{
     
 }
 .logo-frase {
-    text-align: center;
+    text-align: right;
     font-size: clamp(1rem, 3vw, 1.6rem);
     font-weight: 500;
     color: #1cb698;
@@ -122,6 +122,32 @@ html{
 .contenedor-header header nav ul li a:hover{
     color: #1cb698;
 }
+nav {
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  font-size: 14px;
+  padding: 8px 12px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #009999;
+}
+
 .nav-responsive{
     background-color: #1cb698;
     color: #252323;
@@ -721,6 +747,60 @@ button:hover {
     right: 20px;      /* Ajusta posición para móvil */
     font-size: 28px;  /* Tamaño más pequeño */
   }
+}
+
+#testimonios {
+  padding: 60px 20px;
+  background-color: #b8d5ff;
+  text-align: center;
+}
+
+#testimonios h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.testimonios-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.testimonio {
+  background-color: #f4f6f6;
+  padding: 25px;
+  border-left: 5px solid #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  position: relative;
+}
+
+.testimonio p {
+  font-style: italic;
+  color: #333;
+}
+
+.testimonio h4 {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.btn-descarga {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: #007bff;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn-descarga:hover {
+  background-color: #0056b3;
 }
 
 

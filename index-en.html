@@ -4,55 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lorena Bermudez | Portafolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lorena Bermudez | Portfolio</title>
     <link rel="icon" href="img/logo.png" type="image/png">
     <link rel="stylesheet" href="estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
-<!-- Language selector -->
+
+<!-- Floating language button -->
 <div class="language-selector">
   <button id="language-button">🌐</button>
-  <div id="language-options">
-    <button onclick="window.location.href='index-en.html'">English</button>
-    <button onclick="window.location.href='index.html'">Español</button>
+  <div id="language-options" class="hidden">
+      <button id="english-btn">English</button>
+      <button id="spanish-btn">Español</button>
   </div>
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const languageButton = document.getElementById("language-button");
-    const languageOptions = document.getElementById("language-options");
+  document.getElementById("language-button").addEventListener("click", () => {
+    document.getElementById("language-options").classList.toggle("hidden");
+  });
 
-    languageButton.addEventListener("click", () => {
-      languageOptions.classList.toggle("show");
-    });
+  function traducir(lang) {
+    if(lang === "en") {
+      window.location.href = "index-en.html";
+    } else if(lang === "es") {
+      window.location.href = "index.html";
+    }
+  }
+
+  document.getElementById("english-btn").addEventListener("click", () => traducir("en"));
+  document.getElementById("spanish-btn").addEventListener("click", () => traducir("es"));
+</script>
+
+<!-- Image Modal -->
+<div id="modal" class="modal">
+  <span class="close">&times;</span>
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+  <div class="modal-content" id="modal-content"></div>
+</div>  
+
+<script>
+  const languageButton = document.getElementById('language-button');
+  const languageOptions = document.getElementById('language-options');
+  const languageSelector = document.querySelector('.language-selector');
+
+  languageButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    languageOptions.classList.toggle('show');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!languageSelector.contains(e.target)) {
+      languageOptions.classList.remove('show');
+    }
   });
 </script>
-  <!-- Header Menu -->
-  <div class="contenedor-header">
-    <header>
-      <div class="logo">
-        <a href="#"><img src="img/logo.png" alt="Lorena's Logo"></a>
-        <p class="logo-frase">Creativity moves the world</p>
-      </div>
-       <nav id="nav">
-                <ul>
-                   <li><a href="#inicio">HOME</a></li>
-                   <li><a href="#sobremi">ABOUT ME</a></li>
-                   <li><a href="#proyectos">PROJECTS</a></li>
-                   <li><a href="#formacion">ACADEMIC TRAINING</a></li>
-                   <li><a href="#contacto" onclick="seleccionar()">CONTACT</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive">
-                <i class="fa-solid fa-bars"></i>
-            </div>  
-    </header>
-  </div>
-<!-- SECTION HOME -->
+
+<!-- HEADER MENU -->
+<div class="contenedor-header">
+  <header>
+    <div class="logo">
+      <a href="#">
+        <img src="img/logo.png" alt="Lorena's Logo">
+      </a>
+      <p class="logo-frase">Creativity moves the world</p>
+    </div>            
+    <nav id="nav">
+      <ul>
+        <li><a href="#inicio">HOME</a></li>
+        <li><a href="#sobremi">ABOUT ME</a></li>
+        <li><a href="#proyectos">PROJECTS</a></li>
+        <li><a href="#formacion">ACADEMIC BACKGROUND</a></li>
+         <li><a href="#testimonios">TESTIMONIALS</a></li>
+        <li><a href="#contacto" onclick="seleccionar()">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="nav-responsive">
+      <i class="fa-solid fa-bars"></i>
+    </div>  
+  </header>
+</div>
+
+<!-- HOME SECTION -->
 <section id="inicio" class="inicio">
   <div class="contenido-banner">
     <div class="contenedor-img">
@@ -68,19 +105,19 @@
         <i class="fa-brands fa-github"></i>
       </a>
       <a href="mailto:lnoemybr@hotmail.com">
-        <i class="fa-regular fa-envelope"></i>
+        <i class="fa-regular fa-envelope"></i> 
       </a>
     </div>
   </div>
 </section>
 
-<!-- SECTION ABOUT ME -->
+<!-- ABOUT ME SECTION -->
 <section id="sobremi" class="sobremi">
   <div class="contenido-seccion">
     <h2>About Me</h2>
     <p>
       <span>
-        I am Lorena Noemy Bermúdez Rodríguez, a student of Computer Systems and Network Engineering. I am currently undergoing training, enhancing my skills in programming, network administration, and web development. I stand out for being responsible, proactive, and highly committed to growing and contributing in the tech field.
+        I'm Lorena Noemy Bermúdez Rodríguez, a student in Computer Systems and Network Engineering. I'm currently in training, strengthening my skills in programming, network administration, and web development. I'm known for being responsible, proactive, and deeply committed to continuously growing and contributing in the technology field.
       </span>
     </p>
     <a id="cv-link" href="CV-Lorena-Bermudez-Rodriguez-EN.pdf" download>
@@ -93,6 +130,7 @@
     <h2 style="margin-top: 40px;">Skills</h2>
     <div class="habilidades">
 
+      <!-- Figma -->
       <div class="habilidad">
         <div class="info">
           <i class="fa-brands fa-figma icono-figma"></i> Figma
@@ -103,6 +141,7 @@
         </div>
       </div>
 
+      <!-- HTML -->
       <div class="habilidad">
         <div class="info">
           <i class="fa-brands fa-html5 icono-html"></i> HTML
@@ -113,6 +152,7 @@
         </div>
       </div>
 
+      <!-- JavaScript -->
       <div class="habilidad">
         <div class="info">
           <i class="fa-brands fa-js icono-js"></i> JavaScript
@@ -123,6 +163,7 @@
         </div>
       </div>
 
+      <!-- CSS -->
       <div class="habilidad">
         <div class="info">
           <i class="fa-brands fa-css3-alt icono-css"></i> CSS
@@ -235,7 +276,22 @@
     <img class="modal-contenido" id="imgModal">
   </div>
 </section>
+<div class="separador"></div>
+<!-- TESTIMONIALS SECTION -->
+<section id="testimonios">
+  <h2>Testimonials</h2>
+  <div class="testimonios-container">
+    <div class="testimonio">
+      <a href="testimonio_lic_torres.pdf" target="_blank" class="btn-descarga">View testimonial</a>
+      <p>"Lic. Master Oscar Roberto Torres Rodríguez"</p>
+    </div>
 
+    <div class="testimonio">
+      <a href="Carta-de-recomendacion-academica Lorena.pdf" target="_blank" class="btn-descarga">View testimonial</a>
+      <p>"Eng. Alcir Gustavo Quintanilla Rodríguez"</p>
+    </div>
+  </div>
+</section>
 <div class="separador"></div>
 <!-- CONTACT SECTION -->
 <section class="contacto" id="contacto">
@@ -243,6 +299,8 @@
     <h2>Contact</h2>
     <form id="formulario-contacto" action="https://formspree.io/f/mgvyogrn" method="POST">
       <div class="input-group">
+        <p>Do you have any questions? Don't hesitate to contact me. I'll be happy to help you.</p>
+        <p></p>
         <label for="nombre">Name</label>
         <input type="text" id="nombre" name="nombre" required />
       </div>
