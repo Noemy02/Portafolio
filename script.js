@@ -14,153 +14,6 @@ function seleccionar(){
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
-const translations = {
-    "La creatividad mueve el mundo": "Creativity moves the world",
-    "INICIO": "HOME",
-    "SOBRE MI": "ABOUT ME",
-    "PROYECTOS": "PROJECTS",
-    "Sobre Mí": "About Me",
-    "Estudiante de Ingeniería en Sistemas y Redes Informáticas": "Systems and Computer Networks Engineering Student",
-    "Soy Lorena Noemy Bermúdez Rodríguez, estudiante de Ingeniería en Sistemas y Redes Informáticas. Actualmente me encuentro en proceso de formación, fortaleciendo mis habilidades en programación, administración de redes y desarrollo web. Me distingo por ser una persona responsable, proactiva y con un gran compromiso por continuar creciendo y aportando en el ámbito tecnológico.":
-    "I am Lorena Noemy Bermúdez Rodríguez, a student of Systems and Computer Networks Engineering. I am currently in training, strengthening my skills in programming, network administration, and web development. I am known for being responsible, proactive, and deeply committed to continuing to grow and contribute to the tech field.",
-    "Descargar CV": "Download CV",
-    "Proyectos": "Projects",
-    "Huellitas Urbanas": "Urban Pawprints",
-    "Objetivo del proyecto": "Project Objective: ",
-    "Desarrollar una aplicación web para facilitar la gestión integral de un refugio de mascotas, permitiendo el registro, seguimiento y adopción de animales, así como la administración de recursos y personal del refugio.": "To develop a web application to facilitate the comprehensive management of a pet shelter, enabling the registration, tracking, and adoption of animals, as well as the management of shelter resources and staff.",
-    "Descripción general del proceso de trabajo": "Workflow Overview: ", 
-    "El proyecto se llevó a cabo en distintas etapas: análisis de requerimientos, diseño de la interfaz de usuario, desarrollo de funcionalidades principales como registro de mascotas, perfiles de adopción, y panel administrativo.": "The project was carried out in several stages: requirements analysis, user interface design, development of core features such as pet registration, adoption profiles, and an administrative dashboard.",
-    "Rol y responsabilidades en el proyecto": "Role and responsibilities in the project: ",
-    "Me desempeñé como administradora de base de datos, siendo responsable del diseño lógico y físico de la base de datos.": "I served as a database administrator, being responsible for the logical and physical design of the database.",
-    "Tecnologias Utilizadas:": "Technologies Used:",
-    "HTML5, CSS3, JavaScript, PHP.": "HTML5, CSS3, JavaScript, PHP.",
-    "Repositorio:": "Repository:",
-
-    "Couples Game": "Couples Game",
-    "Objetivo del proyecto": "Project Objective:",
-    "Desarrollar un juego interactivo de emparejamiento de cartas como aplicación de escritorio, con el objetivo de ofrecer una experiencia lúdica y dinámica, utilizando tecnologías de desarrollo visual y programación orientada a objetos.": "To develop an interactive card matching game as a desktop application, aiming to provide a playful and dynamic experience using visual development technologies and object-oriented programming.",
-    "Descripción general del proceso de trabajo": "Workflow Overview: ",
-    "Se implementó la lógica del juego en C#, aprovechando el entorno Visual Basic 2019 para el diseño de la interfaz gráfica. Se utilizaron componentes como Label, TableLayoutPanel y Timer para representar las cartas, organizar la disposición de elementos y controlar el tiempo de juego.": "The game logic was implemented in C#, using the Visual Basic 2019 environment for graphical interface design. Components such as Label, TableLayoutPanel, and Timer were used to represent cards, organize layout, and control game time.",
-    "Rol y responsabilidades en el proyecto": "Role and responsibilities in the project: ",
-    "Me desempeñé como desarrolladora full-stack, liderando tanto el diseño de la interfaz de usuario como la implementación de la lógica del juego.": "I worked as a full-stack developer, leading both the user interface design and the implementation of the game logic.",
-    "Tecnologias Utilizadas:": "Technologies Used:",
-    "C# (utilizando Visual Basic 2019 como entorno de desarrollo).": "C# (using Visual Basic 2019 as the development environment).",
-  
-    "Boutique Escandalo": "Scandal Boutique",
-    "Objetivo del proyecto": "Project Objective: ",
-    "Desarrollar un sistema web para la gestión de productos, usuarios y procesos básicos de una boutique, como parte de un proyecto académico enfocado en la creación de aplicaciones funcionales para pequeñas empresas.": "Develop a web-based system for managing products, users, and basic processes for a boutique, as part of an academic project focused on creating functional applications for small businesses.",
-    "El desarrollo del sistema se estructuró en fases: análisis de requerimientos, diseño de la base de datos, creación de la interfaz de usuario y desarrollo del backend utilizando un framework de Python (Flask o Django).": "The system development was structured in phases: requirements analysis, database design, user interface creation, and backend development using a Python framework (Flask or Django).",
-    "Rol y responsabilidades en el proyecto": "Role and responsibilities in the project: ",
-    "Me desempeñé como diseñadora de interfaz de usuario, siendo responsable del diseño visual de la plataforma. Definí la estructura de navegación, los esquemas de color, tipografía y disposición de los elementos para lograr una experiencia estética y funcional, enfocada en la usabilidad y accesibilidad para el usuario final.": "I worked as a user interface designer, responsible for the visual design of the platform. I defined the navigation structure, color schemes, typography, and element layout to achieve an aesthetic and functional user experience focused on usability and accessibility.",
-    "Tecnologias Utilizadas:": "Technologies Used:",
-    "HTML, CSS y Python (Flask o Django).": "HTML, CSS, Python (Flask or Django).",
-    "Todos los derechos reservados.": "All rights reserved.",
-    "© 2025 Lorena Noemy Bermúdez Rodríguez. Todos los derechos reservados.": "© 2025 Lorena Noemy Bermúdez Rodríguez. All rights reserved.",
-    "Contacto": "Contact",
-    "Nombre": "Name",
-    "Correo electrónico": "Email",
-    "Mensaje": "Message",
-    "Enviar mensaje": "Send Message",
-    "¡Mensaje enviado con éxito!": "Message sent successfully!",
-    "Hubo un error al enviar. Por favor intenta nuevamente.": "There was an error sending your message. Please try again.",
-    "Habilidades": "Skills",
-    "Figma": "Figma",
-    "HTML": "HTML",
-    "JavaScript": "JavaScript",
-    "CSS": "CSS"
-
-};
-
-/// Crear diccionario inverso con normalización
-const translationsES = {};
-for (let key in translations) {
-    const cleanedKey = key.trim().replace(/\s+/g, ' ').normalize('NFC');
-    const cleanedValue = translations[key].trim().replace(/\s+/g, ' ').normalize('NFC');
-    translationsES[cleanedValue] = cleanedKey;
-}
-
-// Función principal de traducción
-function translatePage(lang) {
-    const dict = {};
-
-    if (lang === 'en') {
-        for (let key in translations) {
-            const cleanedKey = key.trim().replace(/\s+/g, ' ').normalize('NFC');
-            dict[cleanedKey] = translations[key];
-        }
-    } else {
-        for (let key in translationsES) {
-            const cleanedKey = key.trim().replace(/\s+/g, ' ').normalize('NFC');
-            dict[cleanedKey] = translationsES[key];
-        }
-    }
-
-    const elements = document.body.querySelectorAll("*");
-
-    elements.forEach(el => {
-        // Evitar script/style y elementos con hijos
-        if (['SCRIPT', 'STYLE'].includes(el.tagName)) return;
-
-        // 1. Revisión nodo por nodo
-        let translated = false;
-        el.childNodes.forEach(node => {
-            if (node.nodeType === Node.TEXT_NODE) {
-                const originalText = node.textContent.trim().replace(/\s+/g, ' ').normalize('NFC');
-                if (dict[originalText]) {
-                    node.textContent = dict[originalText];
-                    translated = true;
-                }
-            }
-        });
-
-        // 2. Si no se tradujo ningún nodo, intentamos con el innerText completo
-        if (!translated) {
-            const originalFullText = el.innerText.trim().replace(/\s+/g, ' ').normalize('NFC');
-            if (dict[originalFullText]) {
-                el.innerText = dict[originalFullText];
-            }
-        }
-    });
-
-    // Cambiar CV según el idioma
-    const cvLink = document.getElementById('cv-link');
-    const cvText = document.getElementById('cv-text');
-
-    if (cvLink && cvText) {
-        if (lang === 'en') {
-            cvLink.href = 'CV-Lorena-Bermudez-Rodriguez-EN.pdf';
-            cvText.textContent = 'Download CV';
-        } else {
-            cvLink.href = 'CV-Lorena-Bermudez-Rodriguez-ES.pdf';
-            cvText.textContent = 'Descargar CV';
-        }
-    }
-}
-
-// Control de botones de idioma
-document.getElementById('language-button').addEventListener('click', () => {
-    document.getElementById('language-options').classList.toggle('hidden');
-});
-
-document.getElementById('english').addEventListener('click', () => {
-    translatePage('en');
-    localStorage.setItem('language', 'en');
-    document.getElementById('language-options').classList.add('hidden');
-});
-
-document.getElementById('spanish').addEventListener('click', () => {
-    translatePage('es');
-    localStorage.setItem('language', 'es');
-    document.getElementById('language-options').classList.add('hidden');
-});
-
-// Aplicar idioma guardado al cargar
-window.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem('language');
-    translatePage(savedLanguage || 'es');
-});
-
-
 
 const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modal-content');
@@ -303,4 +156,11 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+ // Agregar funcionalidad a los botones de idioma
+    document.getElementById("english").addEventListener("click", () => {
+    window.location.href = "index-en.html";
+  });
 
+    document.getElementById("spanish").addEventListener("click", () => {
+    window.location.href = "index.html";
+  });

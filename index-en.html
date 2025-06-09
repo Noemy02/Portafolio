@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorena Bermudez | Portafolio</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+<body>
+<!-- Language selector -->
+<div class="language-selector">
+  <button id="language-button">🌐</button>
+  <div id="language-options">
+    <button onclick="window.location.href='index-en.html'">English</button>
+    <button onclick="window.location.href='index.html'">Español</button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const languageButton = document.getElementById("language-button");
+    const languageOptions = document.getElementById("language-options");
+
+    languageButton.addEventListener("click", () => {
+      languageOptions.classList.toggle("show");
+    });
+  });
+</script>
+  <!-- Header Menu -->
+  <div class="contenedor-header">
+    <header>
+      <div class="logo">
+        <a href="#"><img src="img/logo.png" alt="Lorena's Logo"></a>
+        <p class="logo-frase">Creativity moves the world</p>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a href="#inicio">HOME</a></li>
+          <li><a href="#sobremi">ABOUT ME</a></li>
+          <li><a href="#proyectos">PROJECTS</a></li>
+          <li><a href="#contacto">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="nav-responsive"><i class="fa-solid fa-bars"></i></div>
+    </header>
+  </div>
+<!-- SECTION HOME -->
+<section id="inicio" class="inicio">
+  <div class="contenido-banner">
+    <div class="contenedor-img">
+      <img src="img/perfil1.jpg" alt="">
+    </div>
+    <h1>LORENA BERMUDEZ</h1>
+    <h2>Computer Systems and Network Engineering Student</h2>
+    <div class="redes">
+      <a href="https://www.linkedin.com/in/lorena-bermúdez-4b779b353" target="_blank" class="icono">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/Noemy02" target="_blank" class="icono">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="mailto:lnoemybr@hotmail.com">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION ABOUT ME -->
+<section id="sobremi" class="sobremi">
+  <div class="contenido-seccion">
+    <h2>About Me</h2>
+    <p>
+      <span>
+        I am Lorena Noemy Bermúdez Rodríguez, a student of Computer Systems and Network Engineering. I am currently undergoing training, enhancing my skills in programming, network administration, and web development. I stand out for being responsible, proactive, and highly committed to growing and contributing in the tech field.
+      </span>
+    </p>
+    <a id="cv-link" href="CV-Lorena-Bermudez-Rodriguez-EN.pdf" download>
+      <button>
+        <span id="cv-text">Download CV</span> <i class="fa-solid fa-download"></i>
+        <span class="overlay"></span>
+      </button>
+    </a>
+
+    <h2 style="margin-top: 40px;">Skills</h2>
+    <div class="habilidades">
+
+      <div class="habilidad">
+        <div class="info">
+          <i class="fa-brands fa-figma icono-figma"></i> Figma
+          <span class="porcentaje">80%</span>
+        </div>
+        <div class="barra">
+          <div class="progreso" style="width: 80%;"></div>
+        </div>
+      </div>
+
+      <div class="habilidad">
+        <div class="info">
+          <i class="fa-brands fa-html5 icono-html"></i> HTML
+          <span class="porcentaje">70%</span>
+        </div>
+        <div class="barra">
+          <div class="progreso" style="width: 70%;"></div>
+        </div>
+      </div>
+
+      <div class="habilidad">
+        <div class="info">
+          <i class="fa-brands fa-js icono-js"></i> JavaScript
+          <span class="porcentaje">55%</span>
+        </div>
+        <div class="barra">
+          <div class="progreso" style="width: 55%;"></div>
+        </div>
+      </div>
+
+      <div class="habilidad">
+        <div class="info">
+          <i class="fa-brands fa-css3-alt icono-css"></i> CSS
+          <span class="porcentaje">70%</span>
+        </div>
+        <div class="barra">
+          <div class="progreso" style="width: 70%;"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+   <div class="separador"></div>
+   <!-- PROJECTS SECTION -->
+<section class="proyectos" id="proyectos">
+  <div class="contenido-seccion">
+    <h2>Projects</h2>
+    <div class="galeria-proyectos">
+      
+      <!-- Project 1 -->
+      <div class="proyecto">
+        <img src="img/huellitas1.png" alt="Huellitas Urbanas" data-title="Huellitas Urbanas">
+        <div class="info-proyecto">
+          <h3><strong>Huellitas Urbanas</strong></h3>
+          <p><strong>Project Objective:</strong> Develop a web application to facilitate comprehensive management of a pet shelter, enabling the registration, tracking, and adoption of animals, as well as the administration of resources and shelter staff.</p>
+          <p><strong>General Description of the Work Process:</strong> The project was carried out in various stages: requirements analysis, user interface design, development of core features such as pet registration, adoption profiles, and an administrative panel.</p>
+          <p><strong>Role and Responsibilities:</strong> I served as a database administrator, responsible for the logical and physical design of the database.</p>
+          <p><strong>Technologies Used:</strong> HTML5, CSS3, JavaScript, PHP.</p>
+          <p><strong>Repository:</strong> <a href="https://github.com/Noemy02/Huellitasurbanas.git" target="_blank">GitHub</a></p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="proyecto">
+        <img src="img/couples1.png" alt="Couples Game" data-title="Couples Game">
+        <div class="info-proyecto">
+          <h3><strong>Couples Game</strong></h3>
+          <p><strong>Project Objective:</strong> Develop an interactive desktop card-matching game aimed at offering a playful and dynamic experience using visual development technologies and object-oriented programming.</p>
+          <p><strong>General Description of the Work Process:</strong> The game logic was implemented in C#, using Visual Basic 2019 for graphical interface design. Components such as Label, TableLayoutPanel, and Timer were used to represent cards, organize layout, and control game time.</p>
+          <p><strong>Role and Responsibilities:</strong> I worked as a full-stack developer, leading both the user interface design and game logic implementation.</p>
+          <p><strong>Technologies Used:</strong> C# (using Visual Basic 2019 as the development environment).</p>
+          <p><strong>Repository:</strong> <a href="https://github.com/Noemy02/Couples_game.git" target="_blank">GitHub</a></p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="proyecto">
+        <img src="img/boutique1.jpeg" alt="Boutique Escandalo" data-title="Boutique Escandalo">
+        <div class="info-proyecto">
+          <h3><strong>Boutique Escandalo</strong></h3>
+          <p><strong>Project Objective:</strong> Develop a web system for managing products, users, and basic processes of a boutique, as part of an academic project focused on creating functional applications for small businesses.</p>
+          <p><strong>General Description of the Work Process:</strong> The system development was structured in phases: requirements analysis, database design, user interface creation, and backend development using a Python framework (Flask or Django).</p>
+          <p><strong>Role and Responsibilities:</strong> I served as the user interface designer, responsible for the visual design of the platform. I defined the navigation structure, color schemes, typography, and element layout to achieve an aesthetic and functional experience focused on usability and accessibility for the end user.</p>
+          <p><strong>Technologies Used:</strong> HTML, CSS, and Python (Flask or Django).</p>
+          <p><strong>Repository:</strong> <a href="https://github.com/Noemy02/Boutique-Escandalo.git" target="_blank">GitHub</a></p>
+        </div>
+      </div>
+
+    </div> <!-- End of project gallery -->
+  </div>
+</section>
+<div class="separador"></div>
+<!-- CONTACT SECTION -->
+<section class="contacto" id="contacto">
+  <div class="contenido-contacto">
+    <h2>Contact</h2>
+    <form id="formulario-contacto" action="https://formspree.io/f/mgvyogrn" method="POST">
+      <div class="input-group">
+        <label for="nombre">Name</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="input-group">
+        <label for="mensaje">Message</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      </div>
+
+      <!-- Anti-bot -->
+      <input type="text" name="_gotcha" style="display:none" />
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p id="mensaje-exito" style="display:none; color: green; text-align:center; margin-top:1rem;">
+      Message sent successfully!
+    </p>
+    <p id="mensaje-error" style="display:none; color: red; text-align:center; margin-top:1rem;">
+      There was an error sending the message. Please try again.
+    </p>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById("formulario-contacto");
+  const mensajeExito = document.getElementById("mensaje-exito");
+  const mensajeError = document.getElementById("mensaje-error");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    mensajeExito.style.display = "none";
+    mensajeError.style.display = "none";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        mensajeExito.style.display = "block";
+        form.reset();
+      } else {
+        mensajeError.style.display = "block";
+      }
+    } catch (error) {
+      mensajeError.style.display = "block";
+    }
+  });
+</script>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#inicio" class="arriba">
+    <i class="fa-solid fa-angles-up"></i>
+  </a>
+  <div class="redes">
+    <a href="https://www.linkedin.com/in/lorena-bermúdez-4b779b353" target="_blank" class="icono">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+    <a href="https://github.com/Noemy02" target="_blank" class="icono">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </div>
+  <p>&copy; 2025 Lorena Noemy Bermúdez Rodríguez. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

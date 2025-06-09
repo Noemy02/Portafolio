@@ -6,20 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Lorena Bermudez | Portafolio</title>
-    <link rel="icon" href="logo.png" type="image/png">
+   <link rel="icon" href="img/logo.png" type="image/png">
     <link rel="stylesheet" href="estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Botón flotante de idioma -->
+
+<!-- Botón flotante de idioma -->
 <div class="language-selector">
   <button id="language-button">🌐</button>
   <div id="language-options" class="hidden">
-      <button id="english">English</button>
-      <button id="spanish">Español</button>
+      <button id="english-btn">English</button>
+      <button id="spanish-btn">Español</button>
   </div>
 </div>
+
+<script>
+  // Toggle mostrar/ocultar opciones al hacer click en el botón principal
+  document.getElementById("language-button").addEventListener("click", () => {
+    document.getElementById("language-options").classList.toggle("hidden");
+  });
+
+  // Función para traducir o cambiar idioma
+  function traducir(lang) {
+    if(lang === "en") {
+      window.location.href = "index-en.html";
+    } else if(lang === "es") {
+      window.location.href = "index.html";
+    }
+  }
+
+  // Agregar eventos a los botones de idioma
+  document.getElementById("english-btn").addEventListener("click", () => traducir("en"));
+  document.getElementById("spanish-btn").addEventListener("click", () => traducir("es"));
+</script>
+
 <!-- Modal de Imágenes -->
 <div id="modal" class="modal">
   <span class="close">&times;</span>
@@ -170,10 +192,10 @@
         <img src="img/huellitas1.png" alt="Huellitas Urbanas" data-title="Huellitas Urbanas">
         <div class="info-proyecto">
           <h3><strong>Huellitas Urbanas</strong></h3>
-          <p><strong>Objetivo del proyecto</strong> Desarrollar una aplicación web para facilitar la gestión integral de un refugio de mascotas, permitiendo el registro, seguimiento y adopción de animales, así como la administración de recursos y personal del refugio.</p>
-          <p><strong>Descripción general del proceso de trabajo</strong> El proyecto se llevó a cabo en distintas etapas: análisis de requerimientos, diseño de la interfaz de usuario, desarrollo de funcionalidades principales como registro de mascotas, perfiles de adopción, y panel administrativo.</p>
-          <p><strong>Rol y responsabilidades en el proyecto</strong> Me desempeñé como administradora de base de datos, siendo responsable del diseño lógico y físico de la base de datos.</p>
-          <p><strong>Tecnologias Utilizadas</strong> HTML5, CSS3, JavaScript, PHP.</p>
+          <p><strong>Objetivo del proyecto:</strong> Desarrollar una aplicación web para facilitar la gestión integral de un refugio de mascotas, permitiendo el registro, seguimiento y adopción de animales, así como la administración de recursos y personal del refugio.</p>
+          <p><strong>Descripción general del proceso de trabajo:</strong> El proyecto se llevó a cabo en distintas etapas: análisis de requerimientos, diseño de la interfaz de usuario, desarrollo de funcionalidades principales como registro de mascotas, perfiles de adopción, y panel administrativo.</p>
+          <p><strong>Rol y responsabilidades en el proyecto:</strong> Me desempeñé como administradora de base de datos, siendo responsable del diseño lógico y físico de la base de datos.</p>
+          <p><strong>Tecnologias Utilizadas:</strong> HTML5, CSS3, JavaScript, PHP.</p>
           <p><strong>Repositorio:</strong> <a href="https://github.com/Noemy02/Huellitasurbanas.git" target="_blank">GitHub</a></p>
         </div>
       </div>
@@ -183,10 +205,10 @@
         <img src="img/couples1.png" alt="Couples Game" data-title="Couples Game">
         <div class="info-proyecto">
           <h3><strong>Couples Game</strong></h3>
-          <p><strong>Objetivo del proyecto</strong>  Desarrollar un juego interactivo de emparejamiento de cartas como aplicación de escritorio, con el objetivo de ofrecer una experiencia lúdica y dinámica, utilizando tecnologías de desarrollo visual y programación orientada a objetos.</p>
-          <p><strong>Descripción general del proceso de trabajo</strong> Se implementó la lógica del juego en C#, aprovechando el entorno Visual Basic 2019 para el diseño de la interfaz gráfica. Se utilizaron componentes como Label, TableLayoutPanel y Timer para representar las cartas, organizar la disposición de elementos y controlar el tiempo de juego.</p>
-          <p><strong>Rol y responsabilidades en el proyecto</strong> Me desempeñé como desarrolladora full-stack, liderando tanto el diseño de la interfaz de usuario como la implementación de la lógica del juego.</p>
-          <p><strong>Tecnologias Utilizadas</strong> C# (utilizando Visual Basic 2019 como entorno de desarrollo).</p>
+          <p><strong>Objetivo del proyecto:</strong>  Desarrollar un juego interactivo de emparejamiento de cartas como aplicación de escritorio, con el objetivo de ofrecer una experiencia lúdica y dinámica, utilizando tecnologías de desarrollo visual y programación orientada a objetos.</p>
+          <p><strong>Descripción general del proceso de trabajo:</strong> Se implementó la lógica del juego en C#, aprovechando el entorno Visual Basic 2019 para el diseño de la interfaz gráfica. Se utilizaron componentes como Label, TableLayoutPanel y Timer para representar las cartas, organizar la disposición de elementos y controlar el tiempo de juego.</p>
+          <p><strong>Rol y responsabilidades en el proyecto:</strong> Me desempeñé como desarrolladora full-stack, liderando tanto el diseño de la interfaz de usuario como la implementación de la lógica del juego.</p>
+          <p><strong>Tecnologias Utilizadas:</strong> C# (utilizando Visual Basic 2019 como entorno de desarrollo).</p>
           <p><strong>Repositorio:</strong> <a href="https://github.com/Noemy02/Couples_game.git" target="_blank">GitHub</a></p>
         </div>
       </div>
@@ -196,10 +218,10 @@
         <img src="img/boutique1.jpeg" alt="Boutique Escandalo" data-title="Boutique Escandalo">
         <div class="info-proyecto">
           <h3><strong>Boutique Escandalo</strong></h3>
-          <p><strong>Objetivo del proyecto</strong> Desarrollar un sistema web para la gestión de productos, usuarios y procesos básicos de una boutique, como parte de un proyecto académico enfocado en la creación de aplicaciones funcionales para pequeñas empresas.</p>
-          <p><strong>Descripción general del proceso de trabajo</strong> El desarrollo del sistema se estructuró en fases: análisis de requerimientos, diseño de la base de datos, creación de la interfaz de usuario y desarrollo del backend utilizando un framework de Python (Flask o Django).</p>
-          <p><strong>Rol y responsabilidades en el proyecto</strong> Me desempeñé como diseñadora de interfaz de usuario, siendo responsable del diseño visual de la plataforma. Definí la estructura de navegación, los esquemas de color, tipografía y disposición de los elementos para lograr una experiencia estética y funcional, enfocada en la usabilidad y accesibilidad para el usuario final.</p>
-          <p><strong>Tecnologias Utilizadas</strong> HTML, CSS y Python (Flask o Django).</p>
+          <p><strong>Objetivo del proyecto:</strong> Desarrollar un sistema web para la gestión de productos, usuarios y procesos básicos de una boutique, como parte de un proyecto académico enfocado en la creación de aplicaciones funcionales para pequeñas empresas.</p>
+          <p><strong>Descripción general del proceso de trabajo:</strong> El desarrollo del sistema se estructuró en fases: análisis de requerimientos, diseño de la base de datos, creación de la interfaz de usuario y desarrollo del backend utilizando un framework de Python (Flask o Django).</p>
+          <p><strong>Rol y responsabilidades en el proyecto:</strong> Me desempeñé como diseñadora de interfaz de usuario, siendo responsable del diseño visual de la plataforma. Definí la estructura de navegación, los esquemas de color, tipografía y disposición de los elementos para lograr una experiencia estética y funcional, enfocada en la usabilidad y accesibilidad para el usuario final.</p>
+          <p><strong>Tecnologias Utilizadas:</strong> HTML, CSS y Python (Flask o Django).</p>
           <p><strong>Repositorio:</strong> <a href="https://github.com/Noemy02/Boutique-Escandalo.git" target="_blank">GitHub</a></p>
         </div>
       </div>
