@@ -164,3 +164,29 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("spanish").addEventListener("click", () => {
     window.location.href = "index.html";
   });
+
+function filtrarCertificados(tipo, event) {
+  const botones = document.querySelectorAll('.btn-filtro');
+  botones.forEach(btn => btn.classList.remove('activo'));
+  event.target.classList.add('activo');
+
+  const items = document.querySelectorAll('.certificado-item');
+  items.forEach(item => {
+    if (tipo === 'todo' || item.classList.contains(tipo)) {
+      item.classList.remove('oculto');
+    } else {
+      item.classList.add('oculto');
+    }
+  });
+}
+
+function abrirModal(elemento) {
+  const modal = document.getElementById("modalCertificado");
+  const modalImg = document.getElementById("imgModal");
+  modal.style.display = "block";
+  modalImg.src = elemento.querySelector("img").src;
+}
+
+function cerrarModal() {
+  document.getElementById("modalCertificado").style.display = "none";
+}

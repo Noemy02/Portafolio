@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Lorena Bermudez | Portafolio</title>
-   <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="icon" href="img/logo.png" type="image/png">
     <link rel="stylesheet" href="estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -83,12 +83,13 @@
                    <li><a href="#inicio">INICIO</a></li>
                    <li><a href="#sobremi">SOBRE MI</a></li>
                    <li><a href="#proyectos">PROYECTOS</a></li>
+                   <li><a href="#formacion">FORMACIÓN ACADÉMICA</a></li>
                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
             <div class="nav-responsive">
                 <i class="fa-solid fa-bars"></i>
-            </div>
+            </div>  
         </header>
    </div>
 
@@ -225,9 +226,60 @@
           <p><strong>Repositorio:</strong> <a href="https://github.com/Noemy02/Boutique-Escandalo.git" target="_blank">GitHub</a></p>
         </div>
       </div>
-
     </div> <!-- Fin de galeria-proyectos -->
   </div>
+    <div class="separador"></div>
+
+<section class="formacion" id="formacion">
+  <div class="contenido-seccion">
+    <h2>Formación Académica</h2> 
+    <div class="filtros">
+    <button class="btn-filtro activo" onclick="filtrarCertificados('todo', event)">Todo</button>
+    <button class="btn-filtro" onclick="filtrarCertificados('diploma', event)">Diplomas</button>
+    <button class="btn-filtro" onclick="filtrarCertificados('certificado', event)">Certificados</button>
+    </div>
+    <div class="galeria-certificados">
+      <!-- Diplomas -->
+      <div class="certificado-item diploma" onclick="abrirModal(this)">
+        <img src="img/diploma1.jpg" alt="Diploma">
+        <p>Diploma de reconocimiento | Universidad Gerardo Barrios</p>
+      </div>
+      <div class="certificado-item diploma" onclick="abrirModal(this)">
+        <img src="img/diploma2.jpg" alt="Diploma">
+        <p>Diploma de reconocimiento | Universidad Gerardo Barrios</p>
+      </div>
+      <div class="certificado-item diploma" onclick="abrirModal(this)">
+        <img src="img/diploma3.jpg" alt="Diploma">
+        <p>Diploma de reconocimiento | Universidad Gerardo Barrios</p>
+      </div>
+      <div class="certificado-item diploma" onclick="abrirModal(this)">
+        <img src="img/diploma4.jpg" alt="Diploma">
+        <p>Diploma de reconocimiento | Universidad Gerardo Barrios</p>
+      </div>
+      <div class="certificado-item diploma" onclick="abrirModal(this)">
+        <img src="img/diploma5.jpg" alt="Diploma">
+        <p>Diploma de reconocimiento | Universidad Gerardo Barrios</p>
+      </div>
+
+      <!-- Certificados -->
+      <div class="certificado-item certificado" onclick="abrirModal(this)">
+        <img src="img/certificado1.jpg" alt="Certificado">
+        <p>Canva | Fundamentos de Diseño gráfico</p>
+      </div>
+      <div class="certificado-item certificado" onclick="abrirModal(this)">
+        <img src="img/certificado2.jpg" alt="Certificado">
+        <p>Canva | Marketing con Canva</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modalCertificado" class="modal">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <img class="modal-contenido" id="imgModal">
+  </div>
+</section>
+
     <div class="separador"></div>
 <!-- SECCION CONTACTO -->
 <section class="contacto" id="contacto">

@@ -43,7 +43,9 @@
           <li><a href="#inicio">HOME</a></li>
           <li><a href="#sobremi">ABOUT ME</a></li>
           <li><a href="#proyectos">PROJECTS</a></li>
+          <li><a href="#formacion">ACADEMIC TRAINING</a></li>
           <li><a href="#contacto">CONTACT</a></li>
+
         </ul>
       </nav>
       <div class="nav-responsive"><i class="fa-solid fa-bars"></i></div>
@@ -182,6 +184,57 @@
     </div> <!-- End of project gallery -->
   </div>
 </section>
+<div class="separador"></div>
+<section class="formacion" id="formacion">
+  <div class="contenido-seccion">
+    <h2>Academic Background</h2> 
+    <div class="filtros">
+      <button class="btn-filtro activo" onclick="filtrarCertificados('todo', event)">All</button>
+      <button class="btn-filtro" onclick="filtrarCertificados('diploma', event)">Diplomas</button>
+      <button class="btn-filtro" onclick="filtrarCertificados('certificado', event)">Certificates</button>
+    </div>
+    <div class="galeria-certificados">
+      <!-- Diplomas -->
+      <div class="certificado-item diploma" onclick="abrirModal(this)">
+        <img src="img/diploma1.jpg" alt="Diploma">
+        <p>Recognition Diploma | Gerardo Barrios University</p>
+      </div>
+      <div class="certificado-item diploma" onclick="abrirModal(this)">
+        <img src="img/diploma2.jpg" alt="Diploma">
+        <p>Recognition Diploma | Gerardo Barrios University</p>
+      </div>
+      <div class="certificado-item diploma" onclick="abrirModal(this)">
+        <img src="img/diploma3.jpg" alt="Diploma">
+        <p>Recognition Diploma | Gerardo Barrios University</p>
+      </div>
+      <div class="certificado-item diploma" onclick="abrirModal(this)">
+        <img src="img/diploma4.jpg" alt="Diploma">
+        <p>Recognition Diploma | Gerardo Barrios University</p>
+      </div>
+      <div class="certificado-item diploma" onclick="abrirModal(this)">
+        <img src="img/diploma5.jpg" alt="Diploma">
+        <p>Recognition Diploma | Gerardo Barrios University</p>
+      </div>
+
+      <!-- Certificados -->
+      <div class="certificado-item certificado" onclick="abrirModal(this)">
+        <img src="img/certificado1.jpg" alt="Certificate">
+        <p>Canva | Graphic Design Fundamentals</p>
+      </div>
+      <div class="certificado-item certificado" onclick="abrirModal(this)">
+        <img src="img/certificado2.jpg" alt="Certificate">
+        <p>Canva | Marketing with Canva</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modalCertificado" class="modal">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <img class="modal-contenido" id="imgModal">
+  </div>
+</section>
+
 <div class="separador"></div>
 <!-- CONTACT SECTION -->
 <section class="contacto" id="contacto">
