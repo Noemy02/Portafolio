@@ -925,3 +925,41 @@ footer p {
         width: fit-content;
     }
 }
+.intereses {
+  padding: 60px 20px;
+  background-color: #b8d5ff;
+  text-align: center;
+}
+
+.lista-intereses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.interes {
+  width: 140px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.interes i {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-bottom: 10px;
+}
+
+.interes p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.interes:hover {
+  transform: scale(1.05);
+}
