@@ -431,6 +431,30 @@ section {
     overflow: auto;
     background-color: rgba(0,0,0,0.9); /* más oscuro para que la imagen resalte */
 }
+@media (max-width: 480px) {
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+  }
+}
+.modal-content {
+  height: 100%;
+}
+
 
 .modal-content {
     margin: auto;
